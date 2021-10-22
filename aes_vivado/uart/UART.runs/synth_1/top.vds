@@ -1,0 +1,435 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar  1 08:44:22 2021
+# Process ID: 19732
+# Current directory: C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.runs/synth_1/top.vds
+# Journal file: C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2092
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1025.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:26]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_baudrate bound to: 115200 - type: integer 
+	Parameter c_stopbit bound to: 2 - type: integer 
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_baudrate bound to: 115200 - type: integer 
+	Parameter c_stopbit bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'uart_transmitter' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/UART_Transmitter.vhd:6' bound to instance 'i_uart_tx' of component 'uart_transmitter' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'uart_transmitter' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/UART_Transmitter.vhd:21]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_baudrate bound to: 115200 - type: integer 
+	Parameter c_stopbit bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_transmitter' (1#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/UART_Transmitter.vhd:21]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_debtime bound to: 1000 - type: integer 
+	Parameter c_initval bound to: 1'b0 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/Debouncer.vhd:6' bound to instance 'DEBC' of component 'debounce' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/Debouncer.vhd:19]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_debtime bound to: 1000 - type: integer 
+	Parameter c_initval bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/Debouncer.vhd:19]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_debtime bound to: 1000 - type: integer 
+	Parameter c_initval bound to: 1'b0 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/Debouncer.vhd:6' bound to instance 'DEBR' of component 'debounce' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:131]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_baudrate bound to: 115200 - type: integer 
+INFO: [Synth 8-3491] module 'uart_receiver' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/UART_Receiver.vhd:6' bound to instance 'i_uart_rx' of component 'uart_receiver' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'uart_receiver' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/UART_Receiver.vhd:19]
+	Parameter c_clkfreq bound to: 100000000 - type: integer 
+	Parameter c_baudrate bound to: 115200 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_receiver' (3#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/UART_Receiver.vhd:19]
+INFO: [Synth 8-3491] module 'AES2Board' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:5' bound to instance 'i_AES' of component 'AES2Board' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'AES2Board' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:21]
+	Parameter i_Key_encryption_Nbits bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'encrypt_Key_encryption' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:19' bound to instance 'i_key_s' of component 'encrypt_Key_encryption' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'encrypt_Key_encryption' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:39]
+	Parameter i_Key_encryption_Nbits bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'encrypt_KeySchedule' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_KeySchedule.vhd:18' bound to instance 'i_encrypt_KeySchedule' of component 'encrypt_KeySchedule' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'encrypt_KeySchedule' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_KeySchedule.vhd:28]
+INFO: [Synth 8-3491] module 'encrypt_SBox_Column' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:5' bound to instance 'i_encrypt_SBox_Column' of component 'encrypt_SBox_Column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_KeySchedule.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'encrypt_SBox_Column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:12]
+INFO: [Synth 8-3491] module 'encrypt_SBox' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:6' bound to instance 'i_encrypt_SBox' of component 'encrypt_SBox' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'encrypt_SBox' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:14]
+INFO: [Synth 8-226] default block is never used [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_SBox' (4#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:14]
+INFO: [Synth 8-3491] module 'encrypt_SBox' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:6' bound to instance 'i_encrypt_SBox' of component 'encrypt_SBox' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:23]
+INFO: [Synth 8-3491] module 'encrypt_SBox' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:6' bound to instance 'i_encrypt_SBox' of component 'encrypt_SBox' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:23]
+INFO: [Synth 8-3491] module 'encrypt_SBox' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox.vhd:6' bound to instance 'i_encrypt_SBox' of component 'encrypt_SBox' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_SBox_Column' (5#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_KeySchedule' (6#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_KeySchedule.vhd:28]
+INFO: [Synth 8-3491] module 'encrypt_Subbytes' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:6' bound to instance 'i_encrypt_Subbytes' of component 'encrypt_Subbytes' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'encrypt_Subbytes' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:14]
+INFO: [Synth 8-3491] module 'encrypt_SBox_Column' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:5' bound to instance 'i_encrypt_SBox_Column' of component 'encrypt_SBox_Column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:25]
+INFO: [Synth 8-3491] module 'encrypt_SBox_Column' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:5' bound to instance 'i_encrypt_SBox_Column' of component 'encrypt_SBox_Column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:25]
+INFO: [Synth 8-3491] module 'encrypt_SBox_Column' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:5' bound to instance 'i_encrypt_SBox_Column' of component 'encrypt_SBox_Column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:25]
+INFO: [Synth 8-3491] module 'encrypt_SBox_Column' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_SBox_Column.vhd:5' bound to instance 'i_encrypt_SBox_Column' of component 'encrypt_SBox_Column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_Subbytes' (7#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:14]
+INFO: [Synth 8-3491] module 'encrypt_shiftrows' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_shiftrows.vhd:11' bound to instance 'i_encrypt_mix_column' of component 'encrypt_shiftrows' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'encrypt_shiftrows' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_shiftrows.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_shiftrows' (8#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_shiftrows.vhd:19]
+INFO: [Synth 8-3491] module 'encrypt_mix_column' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_mix_column.vhd:22' bound to instance 'i_encrypt_shiftrows' of component 'encrypt_mix_column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'encrypt_mix_column' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_mix_column.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_mix_column' (9#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_mix_column.vhd:29]
+INFO: [Synth 8-3491] module 'encrypt_AddroundKey' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_AddroundKey.vhd:5' bound to instance 'i_encrypt_AddroundKey' of component 'encrypt_AddroundKey' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'encrypt_AddroundKey' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_AddroundKey.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_AddroundKey' (10#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_AddroundKey.vhd:13]
+INFO: [Synth 8-3491] module 'encrypt_LastRound' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_LastRound.vhd:6' bound to instance 'i_encrypt_LastRound' of component 'encrypt_LastRound' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'encrypt_LastRound' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_LastRound.vhd:14]
+INFO: [Synth 8-3491] module 'encrypt_Subbytes' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Subbyte.vhd:6' bound to instance 'i1_encrypt_Subbytes' of component 'encrypt_Subbytes' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_LastRound.vhd:39]
+INFO: [Synth 8-3491] module 'encrypt_shiftrows' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_shiftrows.vhd:11' bound to instance 'i1_encrypt_mix_column' of component 'encrypt_shiftrows' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_LastRound.vhd:45]
+INFO: [Synth 8-3491] module 'encrypt_AddroundKey' declared at 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_AddroundKey.vhd:5' bound to instance 'i1_encrypt_AddroundKey' of component 'encrypt_AddroundKey' [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_LastRound.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_LastRound' (11#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_LastRound.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'encrypt_Key_encryption' (12#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/encrypt_Key_encryption.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:100]
+WARNING: [Synth 8-614] signal 'number' is read in the process but is not in the sensitivity list [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:122]
+WARNING: [Synth 8-614] signal 'result' is read in the process but is not in the sensitivity list [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'AES2Board' (13#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/AES2Board.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'top' (14#1) [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/rtl/USART_top.vhd:26]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1025.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1025.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1025.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1025.504 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.srcs/constrs_1/new/UART_Transmitter.xdc]
+Finished Parsing XDC File [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.srcs/constrs_1/new/UART_Transmitter.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.srcs/constrs_1/new/UART_Transmitter.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1085.555 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1085.555 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_transmitter'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'debounce'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_receiver'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'encrypt_Key_encryption'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                               00 |                               00
+                 s_start |                               01 |                               01
+                  s_data |                               10 |                               10
+                  s_stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_transmitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               s_initial |                              000 |                              000
+                  s_zero |                              001 |                              001
+             s_zerotoone |                              010 |                              010
+                   s_one |                              011 |                              011
+             s_onetozero |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'debounce'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                               00 |                               00
+                 s_start |                               01 |                               01
+                  s_data |                               10 |                               10
+                  s_stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_receiver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0000 |                            00000
+                read_txt |                             0001 |                            00001
+                      r1 |                             0010 |                            00010
+                      r2 |                             0011 |                            00011
+                      r3 |                             0100 |                            00100
+                      r4 |                             0101 |                            00101
+                      r5 |                             0110 |                            00110
+                      r6 |                             0111 |                            00111
+                      r7 |                             1000 |                            01000
+                      r8 |                             1001 |                            01001
+                      r9 |                             1010 |                            01010
+                      lr |                             1011 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'encrypt_Key_encryption'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 6     
+	   2 Input   17 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 3     
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
+	   2 Input      9 Bit         XORs := 16    
+	   2 Input      8 Bit         XORs := 32    
+	   4 Input      8 Bit         XORs := 16    
++---Registers : 
+	              128 Bit    Registers := 6     
+	               32 Bit    Registers := 3     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 7     
+	  12 Input  128 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 10    
+	   2 Input   17 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 33    
+	   2 Input   11 Bit        Muxes := 2     
+	   4 Input   11 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 32    
+	  12 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 6     
+	   4 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 15    
+	   4 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 10    
+	  12 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++--------------------+---------------------------------------------------------------------------------------------+---------------+----------------+
+|Module Name         | RTL Object                                                                                  | Depth x Width | Implemented As | 
++--------------------+---------------------------------------------------------------------------------------------+---------------+----------------+
+|encrypt_SBox        | o_SBox_S                                                                                    | 256x8         | LUT            | 
+|encrypt_KeySchedule | i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S                                    | 256x8         | LUT            | 
+|encrypt_KeySchedule | i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S                                    | 256x8         | LUT            | 
+|encrypt_KeySchedule | i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S                                    | 256x8         | LUT            | 
+|encrypt_KeySchedule | i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S                                    | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_Subbytes    | SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S                     | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[0].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[1].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[2].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[0].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[1].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[2].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
+|encrypt_LastRound   | i1_encrypt_Subbytes/SBOXSubbyte[3].i_encrypt_SBox_Column/SBOXCOL[3].i_encrypt_SBox/o_SBox_S | 256x8         | LUT            | 
++--------------------+---------------------------------------------------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 1085.555 ; gain = 60.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1096.953 ; gain = 71.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    51|
+|3     |LUT1   |    63|
+|4     |LUT2   |   246|
+|5     |LUT3   |    38|
+|6     |LUT4   |    93|
+|7     |LUT5   |   211|
+|8     |LUT6   |  1712|
+|9     |MUXF7  |   608|
+|10    |MUXF8  |   279|
+|11    |FDRE   |  1018|
+|12    |IBUF   |     9|
+|13    |OBUF   |    28|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1103.266 ; gain = 77.762
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 1103.266 ; gain = 17.711
+Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1103.266 ; gain = 77.762
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1109.156 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 938 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1111.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+77 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 1111.414 ; gain = 85.910
+INFO: [Common 17-1381] The checkpoint 'C:/Users/recep/Desktop/28.02.2021_ex_withVivado_AES/aes_vivado/uart/UART.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  1 08:45:49 2021...

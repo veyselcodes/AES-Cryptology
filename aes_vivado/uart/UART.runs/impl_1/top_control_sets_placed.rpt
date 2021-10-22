@@ -1,0 +1,124 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Mar  1 08:46:48 2021
+| Host         : LAPTOP-UB7273AV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    46 |
+|    Minimum number of control sets                        |    46 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    46 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    35 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             458 |          177 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           13 |
+| Yes          | No                    | No                     |             419 |          181 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              98 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------+----------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |       Enable Signal       |         Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------+----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | i_uart_tx/tx_o_i_1_n_0    |                                  |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | i_uart_tx/bittimer        | i_uart_tx/bittimer[6]_i_1__0_n_0 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | i_uart_tx/bittimer        |                                  |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_6     |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_3     |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBR/tx_start0            |                                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | i_uart_tx/shreg           |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_5     |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_0     |                                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_7     |                                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_3  |                                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_8  |                                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_4     |                                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_8     |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_9     |                                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]    |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[1]_2  |                                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_2  |                                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_9  |                                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[1]_1  |                                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_1  |                                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_4  |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_6  |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_5  |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_7  |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[1]_0  |                                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[1]       |                                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[1]_1     |                                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_10 |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[1]_2     |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_1     |                                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_10    |                                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[2]_0  |                                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[1]_0     |                                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | DEBC/cnt_cipher_reg[1]    |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]_2     |                                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | DEBC/cnt_key_reg[2]       |                                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG |                           | i_uart_rx/bittimer[9]_i_1__0_n_0 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG | i_uart_rx/bitcntr         |                                  |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG |                           | DEBC/p_0_in                      |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG |                           | DEBR/p_0_in                      |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG | DEBC/btnc_deb_next_reg_0  | DEBC/signal_o_reg_3              |                8 |             31 |         3.88 |
+|  clk_IBUF_BUFG | DEBC/btnc_deb_next_reg    | DEBC/signal_o_reg_2              |                8 |             31 |         3.88 |
+|  clk_IBUF_BUFG | DEBR/tx_start0            | DEBR/btnr_deb_next_reg           |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | i_AES/i_key_s/E[0]        |                                  |               66 |            128 |         1.94 |
+|  clk_IBUF_BUFG |                           |                                  |              177 |            458 |         2.59 |
++----------------+---------------------------+----------------------------------+------------------+----------------+--------------+
+
+
